@@ -1,0 +1,20 @@
+/*Truco para uniformidad de texto entre navegadores*/
+html{/* esto sirve para que entre navegadores distintos no cambie tanto. para tener una uniformidad entre navegadores */
+    font-size: 62.5%;
+}
+body{/* esto sirve para que entre navegadores distintos no cambie tanto. para tener una uniformidad entre navegadores*/
+    font-size: 16px;
+}
+/*---------------------------------------------------------------------------------------------------*/
+
+/* El punto es para hacer referencia o "llamar" a clases (variables)*/
+.title
+{
+    text-align: center; /* funciona para alinear el texto en medio centrado*/
+    font-size: 3.8rem; /* Es el tamaño de la letra, es recomendable en rem para que sea más exacto*/
+}
+
+.title span /*Se vuelve a llamar porque se le puso span, esto es para que abarque a una parte del titulo solamente*/
+{
+    font-size: 2rem;
+}
