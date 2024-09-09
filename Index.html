@@ -3,16 +3,41 @@
 <head>
     <meta charset="UTF-8"> <!--Significa para interpretar los caracteres ñ, etc.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!--para ajustar el contenido de la pantalla, es como debe mostrar el contenido a los distintos disposiivios-->
+    
+    <!--SIEMPRE VA PRIMERO EL NORMALIZE, es para que todo en todos los navegadores sean consistentes-->
+    <link rel="preload" href="css/normalize.css" as="style"><!--es para precargar el normalize-->
+    <link rel="stylesheet" href="css/normalize.css"><!--Archivo que se va a relacionar, para normalize-->
+    
+
+    <!-- Importación de google fonts (recomendable ponerlo encima de los estilos)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Para precargar las fuentes desde google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- parte de precargar las fuentes-->
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200;400;700&display=swap" rel="stylesheet"> <!--tambien para importar cosos-->
+    
+    <!-- Enlace al css personalizado-->
     <link rel="preload" href="css/styles.css" as="style"><!--es para precargar los estilos-->
     <link rel="stylesheet" href="css/styles.css"><!--Archivo que se va a relacionar, para estilo css-->
+    
     <title>Daniela Sabido</title> <!--etiqueta del titulo-->
 </head>
+
 <body> <!--lo que se va a ver dentro de la página web-->
     <header>    <!--Es para como se van a buscar en linea-->
     <h1 class="title">Daniela Sabido <span >Developer</span></h1> <!--Definir los estilos con class como una referencia para manejarlo-->
 <!--el span es para dividir entre texto de un mismo titulo y aplicarle un estilo diferente-->
 </header>
 
+ <!--Debajo del header siempre normalmente va el nav-->
+    <div class="nav-bg">
+            <nav class="navegacion-principal contenedor"> <!--nav es la barra de navegación-->
+                <a href="#"> Inicio</a> <!-- abreviatura de anchor que es ancla-->
+                <a href="#"> Sobre Mí</a>
+                <a href="#"> Clientes</a>
+                <a href="#"> Contacto</a>
+            </nav>
+        </div>
+    
+    
     <section> <!---->
     <h2>Diseño y desarrollo Web</h2>
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -23,13 +48,8 @@
       funciona copiando el emoji y lit pegandolo-->
         <p>Mérida, Yucatán</p>     
     </section>
-<!--Debajo del header siempre normalmente va el nav-->
-    <nav> 
-        <a href="#"> Inicio</a> <!-- abreviatura de anchor que es ancla-->
-        <a href="#"> Sobre Mí</a>
-        <a href="#"> Clientes</a>
-        <a href="#"> Contacto</a>
-    </nav>
+
+
 <main>
     <h2>Mis servicios</h2>
 

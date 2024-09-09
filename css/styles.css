@@ -1,3 +1,12 @@
+:root{ /*Espara determinar los colores como la raíz de los colores*/
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+
+}
+
 /*Truco para uniformidad de texto entre navegadores*/
 html{/* esto sirve para que entre navegadores distintos no cambie tanto. para tener una uniformidad entre navegadores */
     font-size: 62.5%;
@@ -17,4 +26,35 @@ body{/* esto sirve para que entre navegadores distintos no cambie tanto. para te
 .title span /*Se vuelve a llamar porque se le puso span, esto es para que abarque a una parte del titulo solamente*/
 {
     font-size: 2rem;
+}
+
+/*ESTILO PARA NAVEGACIÓN PRINCIPAL, PARA LA BARRA DE SECCIONES*/
+.navegacion-principal
+{
+    background-color: var(--secundario);
+    display: flex;/*Sirve para alinear elementos en los diseños*/
+    /*Justify-content es para alinear texto para FILAS
+        align-items: sirve para columnas y si se usa usar flexdirection*/
+    justify-content: space-between;  
+    font-weight: bold;  /*Es para poner negritas*/
+    font-size: 2rem;
+}
+/*Al poner el cursor sobre el hipervinculo*/
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+.navegacion-principal a{
+    color:var(--blanco);
+    text-decoration: none; /*quita el estilo subrayado al texto*/
+    padding: 1rem;
+}
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;
+        
+}
+.nav-bg{
+    background-color: var(--secundario);
 }
