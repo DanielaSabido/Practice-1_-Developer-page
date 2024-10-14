@@ -1,4 +1,4 @@
-:root{ /*Espara determinar los colores como la raíz de los colores*/
+:root{ /*Es para determinar los colores como la raíz de los colores*/
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #ffc107;
@@ -15,6 +15,27 @@ body{/* esto sirve para que entre navegadores distintos no cambie tanto. para te
     font-size: 16px;
 }
 /*---------------------------------------------------------------------------------------------------*/
+/*Se aplica desde 0px */
+body{
+     background-color: crimson;
+}
+/*Recomendado
+480 px móviles
+768 px tablets
+*/
+@media (min-width: 480px){
+    body{
+        background-color: blueviolet;
+    }
+}
+@media (min-width: 768px){
+    body{
+        background-color: bisque;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
 
 /* El punto es para hacer referencia o "llamar" a clases (variables)*/
 .title
@@ -38,6 +59,16 @@ body{/* esto sirve para que entre navegadores distintos no cambie tanto. para te
     justify-content: space-between;  
     font-weight: bold;  /*Es para poner negritas*/
     font-size: 2rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+ 
 }
 /*Al poner el cursor sobre el hipervinculo*/
 .navegacion-principal a:hover{
@@ -51,10 +82,18 @@ body{/* esto sirve para que entre navegadores distintos no cambie tanto. para te
     padding: 1rem;
 }
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
         
 }
 .nav-bg{
     background-color: var(--secundario);
 }
+.hero{
+    background-image: url(../img/hero.jpg); 
+    /* dos puntos diagonal es para regresar un nivel de directorio ya que la carpeta img esta afuera de css*/
+    background-repeat: no-repeat; /*es para cuando la pantalla no se repita si la pantalla es más grande que la image(para que no rellene)*/
+    background-size: cover; /*para que se vaya estirando, y que abarque todo el tamaño posible*/
+}
+
+
