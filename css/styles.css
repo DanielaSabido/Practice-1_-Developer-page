@@ -4,6 +4,7 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #b6b6b6;
 
 }
 
@@ -13,37 +14,27 @@ html{/* esto sirve para que entre navegadores distintos no cambie tanto. para te
 }
 body{/* esto sirve para que entre navegadores distintos no cambie tanto. para tener una uniformidad entre navegadores*/
     font-size: 16px;
-}
-/*---------------------------------------------------------------------------------------------------*/
-/*Se aplica desde 0px */
-body{
-     background-color: crimson;
-}
-/*Recomendado
-480 px móviles
-768 px tablets
-*/
-@media (min-width: 480px){
-    body{
-        background-color: blueviolet;
-    }
-}
-@media (min-width: 768px){
-    body{
-        background-color: bisque;
-    }
+        font-family: 'Krub',sans-serif;
+    background-image:linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%)
 }
 
 /*---------------------------------------------------------------------------------------------------*/
 
-
-/* El punto es para hacer referencia o "llamar" a clases (variables)*/
-.title
+h1,h2,h3 /*Para centrar todos estos titulos*/
 {
-    text-align: center; /* funciona para alinear el texto en medio centrado*/
-    font-size: 3.8rem; /* Es el tamaño de la letra, es recomendable en rem para que sea más exacto*/
+    text-align: center;
 }
-
+/*Tamaños de las tipografias*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+/*span*/
 .title span /*Se vuelve a llamar porque se le puso span, esto es para que abarque a una parte del titulo solamente*/
 {
     font-size: 2rem;
@@ -52,7 +43,6 @@ body{
 /*ESTILO PARA NAVEGACIÓN PRINCIPAL, PARA LA BARRA DE SECCIONES*/
 .navegacion-principal
 {
-    background-color: var(--secundario);
     display: flex;/*Sirve para alinear elementos en los diseños*/
     /*Justify-content es para alinear texto para FILAS
         align-items: sirve para columnas y si se usa usar flexdirection*/
@@ -94,6 +84,51 @@ body{
     /* dos puntos diagonal es para regresar un nivel de directorio ya que la carpeta img esta afuera de css*/
     background-repeat: no-repeat; /*es para cuando la pantalla no se repita si la pantalla es más grande que la image(para que no rellene)*/
     background-size: cover; /*para que se vaya estirando, y que abarque todo el tamaño posible*/
+    height: 450px; /*alto del elemento hero*/
+    position: relative; /* position es para manipular la posicion de algo. El padre siempre tiene que ser relativo (la clase que contiene el contenido)*/
+}
+.contenido-hero
+{
+    position: absolute; /*El hijo siempre depende del padre. El hijo se considera al contenido que se encuentra encima de la imagen, siempre debe ser absoluto*/
+    background-color: rgba(0, 0, 0, .7);
+    width:100%;
+    height: 100%;
+    /*Alinear el texto vertical y horizontalmente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.contenido-hero p,
+.contenido-hero h2
+{
+    color:var(--blanco);
+    
+}
+.boton {
+    background-color: var(--secundario); /* Color de fondo similar al botón de la imagen */
+    color: var(--blanco);         /* Color del texto */
+    text-decoration: none;
+    padding: 1rem 3rem;        /* Relleno para un buen tamaño del botón */
+    border: none;
+    font-size: 16px;           /* Tamaño de la fuente */
+    font-weight: bold;         /* Negrita para el texto */
+    border-radius: .5rem;        /* Bordes redondeados */
+    margin-top: 3rem;
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+}
+@media (min-width: 768px){
+    .boton{
+        width: auto;
+    }
+ 
 }
 
+.icono-ciudad{
+    display: flex;
+    align-items:flex-end;
+}
 
