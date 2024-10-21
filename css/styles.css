@@ -132,3 +132,39 @@ h3{
     align-items:flex-end;
 }
 
+/*Todo lo siguiente es para darle estilo a la sección de servicios*/
+@media (min-width: 768px){
+ .servicios{
+    display: grid; /*Es la cuadrilla, esta linea es para llamarlo*/
+    /* grid-template-columns: 1fr 1fr 1fr; Esto significa que se divide en tres fracciones individuales */
+    /* grid-template-columns: 33.3% 33.3% 33.3%; funciona de la misma manera que lo anterior pero con porcentajes*/
+    grid-template-columns: repeat(3,1fr); /*Es más recomendable esto para que sea más mantenible a largo plazo y por fracciones*/
+    /* esta propiedad define el area de las columnas y la funcion repeat repite 3 veces 1 fraccion en el grid/rejilla/cuadricula */
+    column-gap: 1rem; /* espacio vacio entre columnas */
+ }
+}
+/* centrar iconos */
+    .servicio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            color: var(--secundario);
+            font-weight:normal; /*Con esto se quita la negrita del titulo*/
+        }
+        p{
+            text-align: center;
+            line-height: 2; /*De esta forma se pone el interlineado en el parrafo del texto*/
+        }
+        .iconos{
+            background-color: var(--primario);
+            width: 15rem;
+            height: 15rem;
+            border-radius: 50%; /*Apartir de 50% se hace circular*/
+            /* centra horizontal y verticalmente */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+ }
