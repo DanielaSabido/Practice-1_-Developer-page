@@ -119,44 +119,46 @@
     </section>
     </div>
 
-</main>
-
     <section>
         <h2>Contacto</h2>
-        <form><!--Empieza el uso de un formulario.-->
+        <form class="formulario"><!--Empieza el uso de un formulario.-->
             <fieldset><!--son los espacios para los campos de texto-->
                 <legend>Llena tus datos de contacto</legend><!--Etiqueta que corresponde al titulo del formulario-->
-                <div>
+                <div class="contenedor-campos">
+                <div class="campo">
                     <label>Nombre</label><!-- etiqueta del campo de texto-->
                     <input type="text" placeholder="Tu nombre"><!--Campo para que el usuario digite todo-->
                     <!--Placeholder es para mantener el espacio es el texto dentro del cuadro de texto-->
                 </div><!---->
-                <div>
+                <div class="campo">
                     <label>Telefono</label><!-- etiqueta del campo de texto-->
                     <input type="tel" placeholder="Tu teléfono"><!--Campo para que el usuario digite todo-->
                 </div><!--type tel, es para que el teclado sea de números-->
 
-                <div>
+                <div class="campo">
                     <label>Correo</label><!-- etiqueta del campo de texto-->
                     <input type="email" placeholder="Tu correo"><!--Campo para que el usuario digite todo-->
                 </div><!--type email, abre el teclado especial que tiene el arroba-->
 
-                <div>
+                <div class="campo">
                     <label>Mensaje</label><!-- etiqueta del campo de texto-->
                     <textarea > </textarea> <!--Este es para un area de texto, donde puede escribir parrafos enteros-->
                 </div><!--Es para división por secciones en el formulario-->
+            
+            </div> <!--Cierre del contenedor de campos-->
 
-            <div><!--es la sección en donde irá el botón -->
-                <input type="submit" value="Enviar"><!--es un botón, para enviar. -->
+            <div class="alinear-derecha flex"><!--es la sección en donde irá el botón -->
+                <input class="boton w-sm-10" type="submit" value="Enviar"><!--es un botón, para enviar. -->
             </div>
 
             </fieldset>
         </form>
     </section>
-    
-<footer>
-    <p>© Todos los derechos reservados , Daniela Sabido Developer 2024</p>
-</footer>
+    </main>
+
+    <footer class="pie">
+        <p>© Todos los derechos reservados , Daniela Sabido Developer 2024</p>
+    </footer>
 
  </body>
 </html>
